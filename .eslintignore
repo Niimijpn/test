@@ -1,0 +1,16 @@
+# lint から除外するファイルを指定する
+# node_modules/ は デフォルトで除外される
+# config
+.eslintrc.js
+prettier.config.js
+next.config.js
+tailwind.config.js
+tsconfig.json
+postcss.config.js
+
+# build dir
+build/
+bin/
+obj/
+out/
+.next/
