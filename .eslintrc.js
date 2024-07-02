@@ -5,9 +5,8 @@
 module.exports = {
   extends: [
     "eslint:recommended",
-    // typescript-eslint/typescript-eslint/packages/eslint-plugin/src/configs/recommended.ts
-    // typescriptの推奨設定を適用
     "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "next/core-web-vitals",
     "prettier",
   ],
