@@ -14,7 +14,7 @@ module.exports = {
     // ルートディレクトリにキャッシュ用の tsconfig.tsbuildinfo ファイルが出来てしまう
     // --noEmit: コンパイラにコードの型チェックを実行するように指示
     // ファイルの出力は行わない
-    () => "tsc --ncremental false --noEmit",
+    () => "tsc --incremental false --noEmit",
     buildEslintCommand,
     "prettier --write",
   ],
