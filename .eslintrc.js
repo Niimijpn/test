@@ -2,4 +2,19 @@
 // vercel/next.js/packages/eslint-config-next/index.jsから設定ファイルをコピーしてきて、extendsを変更します。
 // fetch や lint　結果のキャッシュが `./next` に残って開発の妨げになる可能性があるので npm script に `rm -rf ./.next` を追加
 /** @type {import('eslint').ESLint.ConfigData} */
-module.exports = { extends: ["next/core-web-vitals", "prettier"] };
+module.exports = {
+  extends: [
+    "eslint:recommended",
+    // typescript-eslint/typescript-eslint/packages/eslint-plugin/src/configs/recommended.ts
+    // typescriptの推奨設定を適用
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals",
+    "prettier",
+  ],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: "./tsconfig.json",
+  },
+  plugins: ["@typescript-eslint"],
+  root: true,
+};
