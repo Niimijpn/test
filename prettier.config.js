@@ -1,9 +1,11 @@
 /** @type {import('prettier').Config} */
 module.exports = {
-  semi: false, // セミコロン無し
-  singleQuote: true, // シングルクォート使う
-  printWidth: 90, // 折り返し
-  tabWidth: 2, // スペースの単位
-  trailingComma: "all", // ケツカンマつける
-  jsxSingleQuote: true, //　JSXでシングルクォートを使用
+  endOfLine: "lf",
+  printWidth: 80,
+  tabWidth: 2,
+  trailingComma: "es5",
+  singleQuote: false,
+  jsxSingleQuote: false,
+  semi: true,
+  plugins: ["prettier-plugin-tailwindcss"],
 };
